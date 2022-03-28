@@ -1,0 +1,13 @@
+<template>
+    <div class="slds-scrollable_y">
+        <template for:each={petCollection} for:item="pet">
+            <div class="slds-align_absolute-center" key={petCollection.Pet__c}>
+                <c-pet-card 
+                pet={pet}
+                onpetselect={selectPet}
+                onpetdeselect={deselectPet}
+                ></c-pet-card>
+            </div>
+        </template>
+    </div>
+</template>
